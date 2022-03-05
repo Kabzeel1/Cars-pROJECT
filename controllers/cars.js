@@ -4,6 +4,11 @@ function newCar(req, res) {
   res.render('cars/new')
 }
 
+function create(res, req){
+  
+}
+
 export{
-  newCar as new
+  newCar as new,
+  create
 }
