@@ -1,0 +1,35 @@
+  <% if (!user) { %>
+    <link rel="stylesheet" href="/stylesheets/siwg.css">
+  <% } %>
+</head>
+<body>
+  <nav>
+    <h1>Horseless Carriage</h1>
+    <h1>The Fast Hall Of Fame</h1>
+    <% if (user) { %>
+      <a href="">
+        <button type="submit">Our Cars Gallery</button>
+      </a>
+      <a href="">
+      <button type="submit">Add A Car</button>
+      </a>
+      <a href="">
+      <button type="submit">Your All Time Favorites</button>
+      </a>
+      <a href="">
+      <button type="submit">Profile</button>
+      </a>
+      <a href="">
+      <button type="submit">Adherents</button>
+      </a>
+      <a href="/auth/logout">
+        <button type="submit">Logout</button>
+      </a>
+    <% } else { %>
+      <a href="/auth/google" class="siwg-link">
+        <button type="submit" class="siwg">
+          <img id="siwg-image" alt="Sign in with Google" />
+        </button>
+      </a>
+    <% } %>
+  </nav>
