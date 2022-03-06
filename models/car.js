@@ -10,6 +10,7 @@ const carSchema = new Schema({
   horsePower: Number,
   torque: Number,
   zeroToSixty: String,
+  price: String,
 })
 
 const Car = mongoose.model("Car", carSchema)

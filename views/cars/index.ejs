@@ -19,11 +19,6 @@
         <tr>
           <td><%= car.title %></td>
           <td><%= car.model %></td>
-          <td><%= car.engine %></td>
-          <td><%= car.manufactureYear %></td>
-          <td><%= car.horsePower %></td>
-          <td><%= car.torque %></td>
-          <td><%= car.zeroToSixty %></td>
           <td><a href="/cars/<%= car._id %>">DETAILS</a></td>
           <td>
             <form action="/cars/<%= cars._id %>?_method=DELETE" method="POST">

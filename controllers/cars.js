@@ -56,10 +56,21 @@ function edit(req, res) {
   })
 }
 
+function update(req, res){
+  Car.findByIdAndUpdate(req.params.id)
+  .then(car => {
+    res.redirect(`/cars/${car.id}`)
+  })
+  .catch(err => {
+    res.redirect("/cars")
+  })
+}
+
 export{
   newCar as new,
   create,
   index,
   show,
   edit,
+  update,
 }
