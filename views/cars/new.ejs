@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/cars/new.css" />
+<%- include('../partials/nav') %>
+
   <main>
     <h1>Add A CAR</h1>
     <form id="new-form" action="/cars" method="POST">
-      <label for="title-input">Vihecle Name:</label>
+      <label for="title-input">Make:</label>
       <input type="text" name="title" id="title-input" />
+      <label for="model">Model:</label>
+      <input type="text" name="model" id="title-input" />
       <label for="engine-type">Engine Type:</label>
       <input type="text" name="engine" id="engine-type" />
       <label for="manufacture-year">Manufacture Year</label>
@@ -104,11 +101,10 @@
       <input type="text" name="horsePower" id="horse-power" />
       <label for="torque">Torque:</label>
       <input type="text" name="torque" id="torque" />
-      <label for="zero-to-sixty">0-60:</label>
+      <label for="zero-to-sixty">0-60mph:</label>
       <input type="text" name="zeroToSixty" id="zero-to-sixty" />
       <button type="submit">Add Vihecle</button>
     </form>
   </main>
-  
-</body>
-</html>
+
+  <%- include('../partials/footer') %>

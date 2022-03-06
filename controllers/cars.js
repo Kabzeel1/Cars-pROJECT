@@ -1,14 +1,49 @@
 import { Car } from "../models/car.js"
 
 function newCar(req, res) {
-  res.render('cars/new')
+  res.render('cars/new',{
+    title: "title"
+  })
 }
 
-function create(res, req){
-  
+function create(req, res){
+ Car.create(req.body)
+ .then(car => {
+   res.redirect('/cars/new')
+ })
+ .catch(err => {
+   res.redirect('/cars/')
+ })
+}
+
+function index(req, res){
+  Car.find({})
+  .then(cars => {
+    res.render('cars/index',{
+      cars: cars,
+      title: 'All Cars',
+    })
+  })
+  .catch(err => {
+    res.redirect('/cars')
+  })
+}
+
+function show(req, res){
+  Car.findById(req.params.id)
+  .then(car => {
+    res.render('cars/show',{
+      car: car
+    })
+  })
+  .catch(err => {
+  res.redirect('/cars')
+  })
 }
 
 export{
   newCar as new,
-  create
+  create,
+  index,
+  show,
 }

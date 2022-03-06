@@ -28,7 +28,16 @@ nav {
   background-color: white;
   font-size: 1.6rem;
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
+}
+
+h1.carriage {
+color: blue;
+justify-content: flex-end;
+}
+
+button.siwg{
+  align-self:flex-end;
 }
 
 main {
