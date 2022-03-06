@@ -33,7 +33,8 @@ function show(req, res){
   Car.findById(req.params.id)
   .then(car => {
     res.render('cars/show',{
-      car: car
+      car: car,
+      title: 'Cars'
     })
   })
   .catch(err => {
