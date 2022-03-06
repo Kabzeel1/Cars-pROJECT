@@ -7,6 +7,7 @@ function newCar(req, res) {
 }
 
 function create(req, res){
+  req.body.owner = req.user.profile._id
  Car.create(req.body)
  .then(car => {
   res.redirect('/cars/new')
@@ -66,6 +67,25 @@ function update(req, res){
   })
 }
 
+function deletCar(req, res) {
+  Car.findById(req.params.id)
+  .then(car => {
+    if (car.owner.equals(req.user.profile._id)) {
+      car.delete()
+      .then(() => {
+        res.redirect("/cars")
+      })
+    } else {
+      throw new Error ("NOT AUTHORIZED")
+    }
+  })
+  .catch(err => {
+    console.log("the error:", err)
+    res.redirect("/cars")
+  })
+}
+
+
 export{
   newCar as new,
   create,
@@ -73,4 +93,5 @@ export{
   show,
   edit,
   update,
+  deletCar as delete,
 }

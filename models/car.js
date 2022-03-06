@@ -11,6 +11,7 @@ const carSchema = new Schema({
   torque: Number,
   zeroToSixty: String,
   price: String,
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 })
 
 const Car = mongoose.model("Car", carSchema)

@@ -8,7 +8,7 @@
     <thead>
       <tr>
         <th>Make</th>
-        <th>Release Year</th>
+        <th>Model</th>
         <th></th>
         <th></th>
       </tr>
@@ -21,9 +21,11 @@
           <td><%= car.model %></td>
           <td><a href="/cars/<%= car._id %>">DETAILS</a></td>
           <td>
-            <form action="/cars/<%= cars._id %>?_method=DELETE" method="POST">
-              <button>X</button>
-            </form>
+            <% if (car.owner.equals(user?.profile._id)) { %>
+              <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
+                <button class="btn" type="submit">Delete</button>
+              </form>
+            <% } %>
           </td>
         </tr>
       <% }) %>
@@ -31,4 +33,4 @@
   </table>
 </main>
 
-<%- include('../partials/footer') %>
+<%- include('./partials/footer') %>
