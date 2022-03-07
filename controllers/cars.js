@@ -19,6 +19,7 @@ function create(req, res){
 
 function index(req, res){
   Car.find({})
+  .populate("owner")
   .then(cars => {
     res.render('cars/index',{
       cars: cars,
@@ -68,7 +69,7 @@ function update(req, res){
 }
 
 function deletCar(req, res) {
-  Car.findById(req.params.id)
+  Car.findById(req.params.id) 
   .then(car => {
     if (car.owner.equals(req.user.profile._id)) {
       car.delete()

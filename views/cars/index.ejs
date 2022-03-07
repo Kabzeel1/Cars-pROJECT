@@ -15,17 +15,21 @@
     </thead>
     <tbody>
       <%# Oh hey, this is an ejs comment! It starts with a # %>
+      <p>From the kitchen of <%= cars.owner?.name %></p>
       <% cars.forEach(car => { %>
         <tr>
           <td><%= car.title %></td>
           <td><%= car.model %></td>
           <td><a href="/cars/<%= car._id %>">DETAILS</a></td>
           <td>
-            <% if (car.owner.equals(user?.profile._id)) { %>
+            <% if (user) { %>
+            <% if (car.owner?.equals(user?.profile._id)) { %>
               <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
                 <button class="btn" type="submit">Delete</button>
               </form>
             <% } %>
+          <% } %>
+           
           </td>
         </tr>
       <% }) %>
@@ -33,4 +37,4 @@
   </table>
 </main>
 
-<%- include('./partials/footer') %>
+<%- include('../partials/footer') %>
