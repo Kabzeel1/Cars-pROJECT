@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: rgb(3, 10, 26);
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
@@ -25,15 +25,19 @@ body {
 }
 
 nav {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.123);
   font-size: 1.6rem;
   display: flex;
   justify-content:space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  position:relative; bottom: 10px;
+  height: 150px;
 }
 
 h1.carriage {
 color: blue;
-justify-content: flex-end;
+justify-content: flex-start;
 }
 
 button.siwg{
@@ -49,4 +53,33 @@ main {
 
 h1 {
   font-size: 3.6rem;
+  color: wheat;
+}
+
+div.menu{
+  color: rgb(13, 119, 168);
+
+  display: grid;
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 500;
+  margin: 30px;
+  font-size: 15px;
+}
+
+a.logout{
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100px;
+  justify-content: flex-end;
+}
+
+nav>a.logout{
+  justify-content: flex-end;
+  align-self: flex-end;
+  position:relative; left:92%; top: -5px
 }

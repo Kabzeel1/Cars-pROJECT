@@ -10,7 +10,6 @@ const carSchema = new Schema({
   horsePower: Number,
   torque: Number,
   zeroToSixty: String,
-  price: String,
   owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 })
 

@@ -7,28 +7,30 @@
     <h1 class="carriage">Horseless Carriage</h1>
     <h1 class="fame">The Fast Hall Of Fame</h1>
     <a href="/cars">
-      <button type="submit">Our Cars Gallery</button>
+      Our Cars Gallery
     </a>
     <% if (user) { %>
       <a href="/Cars/new">
-      <button type="submit">Add A Car</button>
+      Add A Car
       </a>
       <a href="/">
-      <button type="submit">Home</button>
+      Home
       </a>
       <a href="">
-      <button type="submit">Your All Time Favorites</button>
+      Your All Time Favorites
       </a>
       <a href="">
-      <button type="submit">Profile</button>
+      Profile
       </a>
       <a href="">
-      <button type="submit">Adherents</button>
+     Adherents
       </a>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
+      <a href="/auth/logout" class="logout">
+       Logout
       </a>
-    <% } else { %>
+    <% }
+
+    else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
           <img id="siwg-image" alt="Sign in with Google" />
