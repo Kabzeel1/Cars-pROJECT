@@ -13,6 +13,13 @@ function index(req, res){
   })
 }
 
+function newCar(req, res) {
+  res.render('drivers/new', {
+    title: "Add Movie"
+  })
+}
+
 export{
   index,
+  newCar as new,
 }

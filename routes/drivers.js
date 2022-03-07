@@ -6,7 +6,8 @@ const router = Router()
 
 //GET - Localhost: 3000/drivers
 router.get('/', driversCtrl.index)
-
+//GET - Localhost:3000/cars/new
+router.get('/new', isLoggedIn,  driversCtrl.new)
 
 
 export{
