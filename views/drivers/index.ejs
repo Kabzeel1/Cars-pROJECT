@@ -7,19 +7,21 @@
     
 
       <%# Oh hey, this is an ejs comment! It starts with a # %>
-      <% drivers.forEach(car => { %>
-        
-          <div><%= driver.title %></div>
-          <div><%= driver.model %></div>
+      <% drivers.forEach(driver => { %>
+        <div class="driver">
+          <div><%= driver.first %></div>
+          <div><%= driver.last %></div>
           <div><a href="/drivers/<%= driver._id %>">DETAILS</a></div>
           <div>
             <% if (user) { %>
             <% if (driver.owner?.equals(user?.profile._id)) { %>
+
               <form action="/drivers/<%= driver._id %>?_method=DELETE" method="POST">
                 <button class="btn" type="submit">Delete</button>
               </form>
             <% } %>
           <% } %>
+        </div>
       <% }) %>
 
       <a href="/drivers/new"><button type="submit" class="add">Add Driver</button></a>

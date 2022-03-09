@@ -21,7 +21,7 @@ function newCar(req, res) {
 
 function create(req, res){
   req.body.owner = req.user.profile._id
- driver.create(req.body)
+ Driver.create(req.body)
  .then(car => {
   res.redirect('/drivers/new')
  })

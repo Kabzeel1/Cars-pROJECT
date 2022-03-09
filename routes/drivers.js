@@ -9,7 +9,8 @@ router.get('/', driversCtrl.index)
 //GET - Localhost:3000/cars/new
 router.get('/new', isLoggedIn,  driversCtrl.new)
 
-
+// POST - localhost:3000/tacos
+router.post('/', isLoggedIn, driversCtrl.create)
 export{
   router
 }
