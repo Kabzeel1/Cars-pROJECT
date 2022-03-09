@@ -19,18 +19,19 @@ function newCar(req, res) {
   })
 }
 
-unction create(req, res){
+function create(req, res){
   req.body.owner = req.user.profile._id
- Car.create(req.body)
+ driver.create(req.body)
  .then(car => {
-  res.redirect('/cars/new')
+  res.redirect('/drivers/new')
  })
  .catch(err => {
-  res.redirect('/cars/')
+  res.redirect('/drivers/')
  })
 }
 
 export{
   index,
   newCar as new,
+  create,
 }
