@@ -35,9 +35,12 @@ nav {
   height: 150px;
 }
 
-h1.carriage {
-color: blue;
+h1>li {
+color: rgb(77, 77, 241);
 justify-content: flex-start;
+list-style: none;
+font-size: 40px;
+font-weight: 150;
 }
 
 button.siwg{
@@ -74,12 +77,13 @@ a.logout{
   background-color: aliceblue;
   padding: 10px;
   border-radius: 20px;
-  width: 100px;
+  width: 75px;
   justify-content: flex-end;
+  color:black
 }
 
 nav>a.logout{
   justify-content: flex-end;
   align-self: flex-end;
-  position:relative; left:92%; top: -5px
+  position:relative; left:1%; 
 }

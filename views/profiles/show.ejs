@@ -123,15 +123,14 @@
     </h2>
     <% profile.cars.forEach(car => { %>
       <h3>
-        <%= getRandomCat() %>
-        <%= car.name %> is a <%= car.age %> year old <%= car.breed %>
+        <%= car.title %> is a <%= car.model %> year old <%= car.engine %>
         <% if (isSelf) { %>
           <form 
             action="/profiles/<%= profile._id %>/cats/<%= car.id %>?_method=DELETE"
             method="post"
             style="display: inline-block;"
           >
-            <button type="submit">😸 Free <%= car.name %></button>
+            <button type="submit"> Delete <%= car.title %></button>
           </form>
         <% } %>   
       </h3>
