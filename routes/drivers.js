@@ -13,7 +13,7 @@ router.get('/:id', isLoggedIn, driversCtrl.show)
 
 // POST - localhost:3000/drivers
 router.post('/', isLoggedIn, driversCtrl.create)
-//DELETE - Localhost:3000/cars
+//DELETE - Localhost:3000/drivers
 router.delete('/:id', isLoggedIn, driversCtrl.delete)
 
 export{

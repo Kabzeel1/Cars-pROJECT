@@ -1,5 +1,12 @@
-section{
-  color: antiquewhite;
+main{
+  color: rgb(235, 231, 226);
   font-size: 25px;
 }
 
+
+div {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 35.2rem));
+  font-size: 3rem;
+}

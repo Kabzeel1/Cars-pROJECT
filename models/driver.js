@@ -9,6 +9,7 @@ const driverSchema = new Schema({
   birth: Number,
   insta: String,
   facebook: String,
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"},
 })
 
 const Driver = mongoose.model("Driver", driverSchema)

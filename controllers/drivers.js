@@ -35,7 +35,7 @@ function show(req, res) {
   .then(driver => {
     res.render('drivers/show', {
       driver,
-      title: "show"
+      title: "Driver"
     })
   })
   .catch(err => {
@@ -50,14 +50,13 @@ function deletDriver(req, res) {
     if (driver.owner.equals(req.user.profile._id)) {
     driver.delete()
       .then(() => {
-        res.redirect("/driver")
+        res.redirect("/drivers")
       })
     } else {
       throw new Error ("NOT AUTHORIZED")
     }
   })
   .catch(err => {
-    console.log("the error:", err)
     res.redirect("/drivers")
   })
 }  

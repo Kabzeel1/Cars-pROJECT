@@ -81,8 +81,7 @@ function deletCar(req, res) {
     }
   })
   .catch(err => {
-    console.log("the error:", err)
-    res.redirect("/cars")
+  res.redirect("/cars")
   })
 }
 
