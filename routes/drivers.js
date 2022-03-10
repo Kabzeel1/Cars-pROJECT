@@ -6,10 +6,12 @@ const router = Router()
 
 //GET - Localhost: 3000/drivers
 router.get('/', driversCtrl.index)
-//GET - Localhost:3000/cars/new
+//GET - Localhost:3000/driverss/new
 router.get('/new', isLoggedIn,  driversCtrl.new)
+//GET - Localhost: 3000/cars/:id
+router.get('/:id', driversCtrl.show)
 
-// POST - localhost:3000/tacos
+// POST - localhost:3000/drivers
 router.post('/', isLoggedIn, driversCtrl.create)
 export{
   router

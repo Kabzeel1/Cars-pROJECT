@@ -30,8 +30,24 @@ function create(req, res){
  })
 }
 
+function show(req, res) {
+  Driver.findById(req.params.id)
+  .then(driver => {
+    res.render('drivers/show', {
+      driver,
+      title: "show"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/drivers")
+  })
+}
+
+
 export{
   index,
   newCar as new,
   create,
+  show,
 }

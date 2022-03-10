@@ -1,0 +1,28 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/drivers/show.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <section>
+    <div class="show">
+    <div>First: </div>
+    <div>
+      <%= driver.first %>
+    </div>
+    <div>last: </div>
+    <div><%= driver.last %></div>
+    <div>Gender: </div>
+    <div><%= driver.gender %></div>
+    <div>Birth: </div>
+    <div><%= driver.birth %></div>
+    <div>Instagram Tag: </div>
+    <div><%= driver.insta %></div>
+    <div> Facebook: </div>
+    <div><%= driver.facebook %></div>
+  </div>
+  </section>
+</form>
+  
+
+<%- include('../partials/footer') %>
