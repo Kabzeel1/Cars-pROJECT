@@ -44,10 +44,28 @@ function show(req, res) {
   })
 }
 
+function deletDriver(req, res) {
+  Driver.findById(req.params.id) 
+  .then(driver => {
+    if (driver.owner.equals(req.user.profile._id)) {
+    driver.delete()
+      .then(() => {
+        res.redirect("/driver")
+      })
+    } else {
+      throw new Error ("NOT AUTHORIZED")
+    }
+  })
+  .catch(err => {
+    console.log("the error:", err)
+    res.redirect("/drivers")
+  })
+}  
 
 export{
   index,
   newCar as new,
   create,
   show,
+  deletDriver as delete
 }

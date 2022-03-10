@@ -86,6 +86,15 @@ function deletCar(req, res) {
   })
 }
 
+function createReview(req, res) {
+  Car.findById(req.params.id, function(err, car) {
+    car.reviews.push(req.body)
+    car.save(function(err) {
+      res.redirect(`/cars/${car._id}`)
+    })
+  })
+}
+
 
 export{
   newCar as new,
@@ -95,4 +104,5 @@ export{
   edit,
   update,
   deletCar as delete,
+  createReview
 }

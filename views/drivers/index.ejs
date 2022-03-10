@@ -2,17 +2,27 @@
 <link rel="stylesheet" href="/stylesheets/drivers/index.css" />
 <%- include('../partials/nav') %>
 
+
 <main>
   <h1><%= title %></h1>
-    
+  <table id="list">
+    <thead>
+      <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
 
       <%# Oh hey, this is an ejs comment! It starts with a # %>
       <% drivers.forEach(driver => { %>
-        <div class="driver">
-          <div><%= driver.first %></div>
-          <div><%= driver.last %></div>
-          <div><a href="/drivers/<%= driver._id %>">DETAILS</a></div>
-          <div>
+        <tr class="driver">
+          <td><%= driver.first %></td>
+          <td><%= driver.last %></td>
+          <td><a href="/drivers/<%= driver._id %>">DETAILS</a></td>
+          <td>
             <% if (user) { %>
             <% if (driver.owner?.equals(user?.profile._id)) { %>
 
@@ -21,12 +31,14 @@
               </form>
             <% } %>
           <% } %>
-        </div>
+          </td>
+        </tr>
       <% }) %>
 
-      <a href="/drivers/new"><button type="submit" class="add">Add Driver</button></a>
-    </div>
+    </tbody>
+  </table>
 
+  <a href="/drivers/new"><button type="submit" class="add">Add Driver</button></a>
 </main>
 
 <%- include('../partials/footer') %>

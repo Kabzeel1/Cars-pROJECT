@@ -73,6 +73,14 @@ a{
   font-size: 15px;
 }
 
+a.horse{
+color: rgb(77, 77, 241);
+justify-content: flex-start;
+list-style: none;
+font-size: 30px;
+font-weight: 150;
+}
+
 a.logout{
   background-color: aliceblue;
   padding: 10px;
@@ -86,4 +94,12 @@ nav>a.logout{
   justify-content: flex-end;
   align-self: flex-end;
   position:relative; left:1%; 
+}
+
+p{
+  color: rgb(177, 212, 241);
+  font-size: 35px;
+  font-family:'Courier New', Courier, monospace;
+  font-style: italic;
+  font-weight: 800;
 }

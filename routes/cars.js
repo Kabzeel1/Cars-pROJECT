@@ -14,6 +14,8 @@ router.get('/:id', carsCtrl.show)
 
 //Post - localhost:3000/cars
 router.post('/', isLoggedIn, carsCtrl.create)
+// POST - localhost:3000/movies/:id/reviews
+router.post("/:id/reviews", carsCtrl.createReview)
 
 //DELETE - Localhost:3000/cars
 router.delete('/:id', isLoggedIn, carsCtrl.delete)

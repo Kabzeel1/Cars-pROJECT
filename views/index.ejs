@@ -2,14 +2,9 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>Hii <%= user ? user.profile.name : "friend" %>,  Are You Up For Some Vroom!! 🏎️</h1>
   <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
+    <p>Welcome to our page where you will get to know some of the most Loved cars in the world and not just that but also get to know a little more about their details.</p>
   <% } %>
 </main>
 
