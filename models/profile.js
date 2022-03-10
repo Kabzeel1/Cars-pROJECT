@@ -1,9 +1,13 @@
 import mongoose from 'mongoose'
 
-onst catSchema = new mongoose.Schema({
-  name: String,
-  age: Number,
-  breed: String
+const favSchema = new mongoose.Schema({
+  title: String,
+  model: String,
+  engine: String,
+  manufactureYear: Number,
+  horsePower: Number,
+  torque: Number,
+  zeroToSixty: String,
 }, {
   timestamps: true,
 })
@@ -12,6 +16,7 @@ onst catSchema = new mongoose.Schema({
 const profileSchema = new mongoose.Schema({
   name: String,
   avatar: String,
+  cars: [favSchema]
 }, {
   timestamps: true
 })

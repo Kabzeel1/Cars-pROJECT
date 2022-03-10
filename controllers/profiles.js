@@ -18,9 +18,13 @@ function show(req, res) {
   Profile.findById(req.params.id)
   .then(profile => {
     Profile.findById(req.user.profile._id)
-    res.render("profiles/show", {
-      profile,
-      title: "Love"
+    .then(self => {
+      const isSelf = self._id.equals(profile._id)
+      res.render("profiles/show", {
+        title: ` ${profile.name}'s profile`,
+        profile,
+        isSelf
+      })
     })
   })
   .catch(err => {
@@ -30,7 +34,41 @@ function show(req, res) {
 }
 
 
+function createCar(req, res) {
+  Profile.findById(req.user.profile._id)
+  .then(profile => {
+    profile.cars.push(req.body)
+    profile.save()
+    .then(() => {
+      res.redirect(`/profiles/${req.user.profile._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect(`/profiles/${req.user.profile._id}`)
+    })
+  })
+}
+
+function deleteCar(req, res) {
+  Profile.findById(req.params.profileId)
+  .then(profile => {
+    profile.cars.remove({_id: req.params.carId})
+    profile.save()
+    .then(() => {
+      res.redirect(`/profiles/${req.user.profile._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/profiles/${req.user.profile._id}`)
+  })
+}
+
+
+
 export{
   index,
-  show
+  show,
+  createCar,
+  deleteCar
 }
