@@ -6,7 +6,7 @@ This is a MEN Stack Application that gathers some of the best Car and drivers in
 
 With this game, you have a chance to win 1000 dollars. This will happen every time you match 3 of the characters on the board.
 
-![Play And Win](Untitled.png "Horseless Carriage")
+![Play And Win](trello.png "Horseless Carriage")
 ![Play And Win](Untitled.png "Horseless Carriage")
 
 ## how the game was made.
