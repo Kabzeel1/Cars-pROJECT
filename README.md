@@ -3,7 +3,6 @@
 This is a MEN Stack Application that gathers some of the best Car and drivers in the world in one page. When a User is logged in using their google account they are enabled to add cars and drivers that they know are the best. Once added they will be exposed to the world.
 
 ![H.S](trello.png "Horseless Carriage")
-![H.S](Log.png "Horseless Carriage")
 ![H.S](Untitled.png "Horseless Carriage")
 
 ## how the App was made.
