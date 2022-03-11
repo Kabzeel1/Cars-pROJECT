@@ -22,6 +22,7 @@
     <div>0-60mph: </div>
     <div><%= car.zeroToSixty %></div>
   </section>
+  <h2><a href="/cars/<%= car._id %>/edit"><button>EDIT</button></a></h2>
   <h2>Reviews</h2>
   <form 
     action="/cars/<%= car._id %>/reviews"

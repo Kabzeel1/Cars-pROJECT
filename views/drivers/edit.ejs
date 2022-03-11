@@ -1,0 +1,28 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/cars/edit.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>Edit Driver</h1>
+  <form 
+    id="new-form" 
+    action="/drivers/<%= driver._id %>?_method=PUT"
+    method="POST"
+  >
+    <label for="first-input">First:</label>
+    <input type="text" name="first" id="fist"value="<%= driver.first %>"/>
+    <label for="last-input">Last:</label>
+    <input type="text" name="last" id="last" value="<%= driver.last %>"/>
+    <label for="gender-input">Gender:</label>
+    <input type="text" name="gender" id="gender" value="<%= driver.gender %> "/>
+    <label for="birth-input">Birth:</label>
+    <input type="text" name="birth" id="birth" value="<%= driver.birth %>"/>
+    <label for="insta-input">Instagram Tag:</label>
+    <input type="text" name="insta" id="insta" value="<%= driver.insta %>"/>
+    <label for="facebook-input">Facebook:</label>
+    <input type="text" name="facebook" id="facebook" value="<%= driver.facebook %>"/>
+    <button type="submit">Save Driver </button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

@@ -58,15 +58,25 @@ function edit(req, res) {
   })
 }
 
-function update(req, res){
-  Car.findByIdAndUpdate(req.params.id)
+function update(req, res) {
+  Car.findById(req.params.id)
   .then(car => {
-    res.redirect(`/cars/${car.id}`)
+    if (car.owner.equals(req.user.profile._id)) {
+      req.body.tasty = !!req.body.tasty
+      car.updateOne(req.body, {new: true})
+      .then(() => {
+        res.redirect(`/cars/${req.params.id}`)
+      })
+    } else {
+      throw new Error("NOT AUTHORIZED")
+    }
   })
   .catch(err => {
+    console.log("the error:", err)
     res.redirect("/cars")
   })
 }
+
 
 function deletCar(req, res) {
   Car.findById(req.params.id) 
@@ -93,8 +103,6 @@ function createReview(req, res) {
     })
   })
 }
-
-
 export{
   newCar as new,
   create,
@@ -103,5 +111,5 @@ export{
   edit,
   update,
   deletCar as delete,
-  createReview
+  createReview,
 }
