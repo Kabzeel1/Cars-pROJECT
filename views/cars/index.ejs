@@ -21,9 +21,9 @@
         <tr>
           <td><%= car.title %></td>
           <td><%= car.model %></td>
-          <td><a href="/cars/<%= car._id %>">DETAILS</a></td>
-          <td>
-            <% if (user) { %>
+          <% if (user) { %>
+            <td><a href="/cars/<%= car._id %>">DETAILS</a></td>
+            <td>
             <% if (car.owner?.equals(user?.profile._id)) { %>
               <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
                 <button class="btn" type="submit">Delete</button>
