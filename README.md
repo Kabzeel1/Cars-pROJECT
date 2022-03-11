@@ -17,11 +17,8 @@ This game was made by the help of the following programming tools.
 - ***HTML*** 
 
 - ***CSS*** 
-- 
 - ***Node.js*** 
-- 
 - ***Mongoose*** 
-- 
 - ***MongoDb*** 
 
 ## Whats next?
