@@ -1,4 +1,4 @@
-# Horseless Carriage.  [](https://kabzeel1.github.io/Unit1-Slotmachine-Project/)
+# Horseless Carriage.  [Click Here](https://horseless-carriage.herokuapp.com/)
 # Intro About The App.
 This is a MEN Stack Application that gathers some of the best Car and drivers in the world in one page. When a User is logged in using their google account they are enabled to add cars and drivers that they know are the best. Once added they will be exposed to the world.
 
@@ -6,16 +6,23 @@ This is a MEN Stack Application that gathers some of the best Car and drivers in
 
 With this game, you have a chance to win 1000 dollars. This will happen every time you match 3 of the characters on the board.
 
-![Play And Win](favicons/favicon_io/SLOT.png "Slot Machine")
+![Play And Win](Untitled.png "Horseless Carriage")
+![Play And Win](Untitled.png "Horseless Carriage")
 
 ## how the game was made.
 This game was made by the help of the following programming tools.
 
-- ***Javascript*** : this was used to bring forth the behavior of the game.
+- ***Javascript*** 
 
-- ***HTML*** : which helped to link with all the other languages and make them compatible with the web.
+- ***HTML*** 
 
-- ***CSS*** : CSS helped with the styling of the game.
+- ***CSS*** 
+- 
+- ***Node.js*** 
+- 
+- ***Mongoose*** 
+- 
+- ***MongoDb*** 
 
 ## Whats next?
 
