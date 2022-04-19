@@ -20,7 +20,9 @@
     <div><%= driver.insta %></div>
     <div> Facebook: </div>
     <div><%= driver.facebook %></div>
-    <h1><a href="/drivers/<%= driver._id %>/edit"><button>Edit</button></a></h1>
+    <% if (driver.owner?.equals(user?.profile._id)) { %>
+      <h1><a href="/drivers/<%= driver._id %>/edit"><button>Edit</button></a></h1>
+      <% } %> 
   </div>
   
 

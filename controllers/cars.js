@@ -47,10 +47,14 @@ function show(req, res){
 function edit(req, res) {
   Car.findById(req.params.id)
   .then(car => {
-    res.render("cars/edit", {
-      car,
-      title: "edit"
-    })
+    if (car.owner.equals(req.user.profile._id)){
+      res.render("cars/edit", {
+        car,
+        title: "edit"
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED')
+    }
   })
   .catch(err => {
     console.log(err)

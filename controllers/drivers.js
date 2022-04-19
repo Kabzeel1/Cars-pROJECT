@@ -22,10 +22,14 @@ function newCar(req, res) {
 function edit(req, res) {
   Driver.findById(req.params.id)
   .then(driver => {
-    res.render("drivers/edit", {
-      driver,
-      title: "edit"
-    })
+    if (driver.owner.equals(req.user.profile._id)) {
+      res.render("drivers/edit", {
+        driver,
+        title: "edit"
+      })
+    } else{
+      throw new Error ('NOT AUTHORIZED')
+    }
   })
   .catch(err => {
     res.redirect("/drivers")

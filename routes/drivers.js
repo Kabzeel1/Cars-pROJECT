@@ -6,11 +6,11 @@ const router = Router()
 
 //GET - Localhost: 3000/drivers
 router.get('/', driversCtrl.index)
-//GET - Localhost:3000/driverss/new
+//GET - Localhost:3000/drivers/new
 router.get('/new', isLoggedIn,  driversCtrl.new)
-//GET - Localhost: 3000/cars/:id
+//GET - Localhost: 3000/drivers/:id
 router.get('/:id', isLoggedIn, driversCtrl.show)
-// GET - localhost:3000/cars/:id/edit
+// GET - localhost:3000/drivers/:id/edit
 router.get("/:id/edit", driversCtrl.edit)
 
 
@@ -18,7 +18,7 @@ router.get("/:id/edit", driversCtrl.edit)
 router.post('/', isLoggedIn, driversCtrl.create)
 //DELETE - Localhost:3000/drivers
 router.delete('/:id', isLoggedIn, driversCtrl.delete)
-// PUT - localhost:3000/cars/:id
+// PUT - localhost:3000/drivers/:id
 router.put("/:id", driversCtrl.update)
 
 
