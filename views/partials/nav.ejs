@@ -4,26 +4,23 @@
 </head>
 <body>
   <nav>
-    <a href="/" class="horse">
-      <li class="top">Horseless</li>
-      <li class="bottom">Carriage</li>
-    </a>
-    <a href="/cars" class="gallery">
-      Gallery
-    </a>
+    
+   
+   
     <% if (user) { %>
       
-      
-
       <div class="navbar">
         <div class="dropdown">
-          <button class="dropbtn">Menu
+          <button class="dropbtn">
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
             <a href="/">
               Home
-              </a>
+            </a>
+            <a href="/cars" class="gallery">
+              Gallery
+            </a>
               <a href="/drivers">
               Drivers
               </a>
@@ -42,10 +39,16 @@
     <% }
 
     else { %>
+      
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
           <img id="siwg-image" alt="Sign in with Google" />
         </button>
       </a>
     <% } %>
+
+    <a href="/" class="horse">
+      <li class="top">HS</li>
+    </a>
+
   </nav>
