@@ -8,37 +8,37 @@
       <li class="top">Horseless</li>
       <li class="bottom">Carriage</li>
     </a>
-    <a href="/cars">
-      Our Cars Gallery
+    <a href="/cars" class="gallery">
+      Gallery
     </a>
     <% if (user) { %>
       
       
-    
 
-      <div class="dropdown">
-        <button class="mainmenubtn">Main Menu</button>
-        <div class="dropdown-child">
-          <a href="/cars">
-            Our Cars Gallery
-          </a>
-          <a href="/">
-            Home
-            </a>
-            <a href="/drivers">
-            Drivers
-            </a>
-            <a href="/Cars/new">
-            Add A Car
-            </a>
-            <a href="/profiles">
-            Profile
-            </a>
-            <a href="/auth/logout" class="logout">
-             Logout
-            </a>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">Menu
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/">
+              Home
+              </a>
+              <a href="/drivers">
+              Drivers
+              </a>
+              <a href="/drivers/new">
+              Add Drivers
+              </a>
+              <a href="/Cars/new">
+              Add A Car
+              </a>
+              <a href="/auth/logout" class="logout">
+               Logout
+              </a>
+          </div>
         </div>
-      </div>
+      </div>      
     <% }
 
     else { %>

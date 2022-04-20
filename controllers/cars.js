@@ -1,4 +1,5 @@
 import { Car } from "../models/car.js"
+import {v2 as cloudinary} from 'cloudinary'
 
 function newCar(req, res) {
   res.render('cars/new',{

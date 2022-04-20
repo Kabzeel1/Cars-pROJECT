@@ -4,7 +4,7 @@ main{
 }
 
 
-div {
+div.show {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 35.2rem));
