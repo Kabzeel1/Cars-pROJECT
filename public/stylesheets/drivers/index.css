@@ -41,8 +41,10 @@ main{
 
 
 button.add{
-  background-color: antiquewhite;
-  
+  background-color: rgb(241, 235, 237);
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
 }
 
 tr.driver{
