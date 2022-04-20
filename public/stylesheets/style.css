@@ -160,8 +160,6 @@ p{
   margin: 0; /* Important for vertical align on mobile phones */
   font-weight: 700;
 }
-
-/* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: rgb(4, 122, 151);
 }
@@ -192,6 +190,7 @@ p{
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
+  border-radius: 20px;
 }
 
 /* Show the dropdown menu on hover */
@@ -207,11 +206,16 @@ p{
 }
 img{
   width: 500px;
-  margin-top: 20ch;
+  margin-top: 8ch;
 }
 
 button.siwg{
   width: 40px;
 }
+html{
+  width: 760px;
+ 
+  };
+ 
 
 }
