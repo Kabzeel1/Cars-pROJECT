@@ -41,10 +41,12 @@ main{
 
 
 button.add{
-  background-color: rgb(241, 235, 237);
+  background-color:  #b8c0c2;;
   width: 100px;
   height: 40px;
   border-radius: 10px;
+  color: rgb(17, 16, 16);
+  font-weight: 600;
 }
 
 tr.driver{
