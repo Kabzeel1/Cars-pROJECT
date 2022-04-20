@@ -5,28 +5,40 @@
 <body>
   <nav>
     <a href="/" class="horse">
-      <li>Horseless</li>
-      <li>Carriage</li>
+      <li class="top">Horseless</li>
+      <li class="bottom">Carriage</li>
     </a>
     <a href="/cars">
       Our Cars Gallery
     </a>
     <% if (user) { %>
-      <a href="/">
-      Home
-      </a>
-      <a href="/drivers">
-      Drivers
-      </a>
-      <a href="/Cars/new">
-      Add A Car
-      </a>
-      <a href="/profiles">
-      Profile
-      </a>
-      <a href="/auth/logout" class="logout">
-       Logout
-      </a>
+      
+      
+    
+
+      <div class="dropdown">
+        <button class="mainmenubtn">Main Menu</button>
+        <div class="dropdown-child">
+          <a href="/cars">
+            Our Cars Gallery
+          </a>
+          <a href="/">
+            Home
+            </a>
+            <a href="/drivers">
+            Drivers
+            </a>
+            <a href="/Cars/new">
+            Add A Car
+            </a>
+            <a href="/profiles">
+            Profile
+            </a>
+            <a href="/auth/logout" class="logout">
+             Logout
+            </a>
+        </div>
+      </div>
     <% }
 
     else { %>

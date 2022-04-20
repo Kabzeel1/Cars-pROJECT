@@ -30,9 +30,10 @@ nav {
   display: flex;
   justify-content:space-between;
   align-items: flex-end;
-  flex-wrap: wrap;
-  position:relative; bottom: 10px;
-  height: 150px;
+ 
+  position:relative; bottom: 0px;
+  
+ 
 }
 
 h1>li {
@@ -70,7 +71,16 @@ a{
   color: aliceblue;
   font-weight: 500;
   margin: 30px;
-  font-size: 15px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+img{
+  width: 1000px;
+}
+
+li.top{
+margin-top: 10px;
 }
 
 a.horse{
@@ -79,13 +89,14 @@ justify-content: flex-start;
 list-style: none;
 font-size: 30px;
 font-weight: 150;
+margin-bottom: 1px;
 }
 
 a.logout{
   background-color: aliceblue;
   padding: 10px;
   border-radius: 20px;
-  width: 75px;
+  width: 79px;
   justify-content: flex-end;
   color:black
 }
@@ -102,4 +113,47 @@ p{
   font-family:'Courier New', Courier, monospace;
   font-style: italic;
   font-weight: 800;
+}
+
+.mainmenubtn {
+  background-color: skyblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding:20px;
+  margin-top:20px;
+  border-radius: 20px;
+}
+.mainmenubtn:hover {
+  background-color: blue;
+  }
+.dropdown {
+  position:relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+.dropdown-child {
+  display: none;
+  background-color: skyblue;
+  min-width: 100px;
+}
+.dropdown-child a {
+  color: blue;
+  padding: 7px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-child {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7px;
+  border-radius: 10px;
+}
+
+
+
+@media only screen and (min-width: 1041px) {
+
+
+
 }
